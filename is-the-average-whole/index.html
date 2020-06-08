@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function isTheAverageWhole(numbersArray) {
+      var total = 0;
+      for(var i = 0; i < numbersArray.length; i++) {
+        total += numbersArray[i];
+      }
+      var avg = total / numbersArray.length
+      if (avg === Math.floor(avg)) {
+        return true
+      } else {
+        return false
+      }
+    }
+
+    console.log(isTheAverageWhole([1, 3, 4, 4]))
+    console.log(isTheAverageWhole([3, 4]))
+    console.log(isTheAverageWhole([5, 5, 5]))
+  </script>
+</body>
+</html>
