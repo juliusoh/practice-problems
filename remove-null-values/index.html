@@ -8,20 +8,20 @@
 <body>
   <script>
     function removeNullValues(array) {
-    // var result = []
+    var result = []
 
-    //   for (i = 0; i < array.length; i++) {
-    //     var value = array[i];
-    //     if (value) {
-    //       result[i] = value;
-    //     }
-    //   }
-    //   return result
-    // }
+      for (i = 0; i < array.length; i++) {
+        var value = array[i];
+        if (value) {
+          result.push(array[i])
+        }
+      }
+      return result
+    }
 
-  var filter = array.filter(e => e!= null) 
-   return filter
-  }
+  //   var filter = array.filter(e => e!= null) 
+  //   return filter
+  // }
     console.log(removeNullValues([3, 5, null, null, 87, "hello", "goodbye"]));
     console.log(removeNullValues([true, null, false, {}, null, 43, "node"]));
     console.log(removeNullValues([null, null, null, 7, null, "eight"]));
