@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function isSantaComing(dateObject) {
+      var christmas = new Date("12/24");
+      return (dateObject.getTime() === christmas.getTime())
+    }
+    console.log(isSantaComing(new Date(2001, 11, 24))) // -> true);
+    console.log(isSantaComing(new Date(2018, 7, 4))) // -> false
+    console.log(isSantaComing(new Date(1995, 11, 23, 23, 59, 59))) // -> false
+  </script>
+</body>
+
+</html>
