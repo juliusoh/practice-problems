@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function wordBuilder(word) {
+      var result = '';
+      var array = []
+      for (i = 0; i < word.length; i++) {
+       array.push(result+=word[i])
+      }
+      return array
+    }
+
+
+    console.log(wordBuilder("JavaScript")) // -> ["J", "Ja", "Jav", "Java", "JavaS", "JavaSc", "JavaScr", "JavaScri", "JavaScrip", "JavaScript"]);
+    console.log(wordBuilder("Moon")) // -> ["M", "Mo", "Moo", "Moon"]
+    console.log(wordBuilder("Stars")) // -> ["S", "St", "Sta", "Star", "Stars"]
+
+
+ 
+  </script>
+</body>
+</html>
