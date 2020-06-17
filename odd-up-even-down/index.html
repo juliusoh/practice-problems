@@ -11,11 +11,11 @@
       var newArr = [];
       for (let i = 0; i < array.length; i++) {
         var value = array[i]
-        if (value % 2 === 1) {
-          value++;
+        if (value % 2 === 0) {
+          value--;
           newArr.push(value)
         } else {
-          value--;
+          value++;
           newArr.push(value)
         }
       }
