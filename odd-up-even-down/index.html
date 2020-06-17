@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function oddUpEvenDown(array) {
+      var newArr = [];
+      for (let i = 0; i < array.length; i++) {
+        var value = array[i]
+        if (value % 2 === 1) {
+          value++;
+          newArr.push(value)
+        } else {
+          value--;
+          newArr.push(value)
+        }
+      }
+      return newArr
+    }
+    console.log(oddUpEvenDown([1, 2, 3, 4, 5])) // -> [2, 1, 4, 3, 6]);
+    console.log(oddUpEvenDown([23, 15, 18, 14, 32])) // -> [24, 16, 17, 13, 31] // -> [2, 1, 4, 3, 6]);
+    console.log(oddUpEvenDown([72, 212, 77, 124, 53])) // -> [71, 211, 78, 123, 54]
+  </script>
+</body>
+</html>
