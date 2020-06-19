@@ -8,11 +8,16 @@
 <body>
   <script>
     function zipCodeValidator(str) {
-        const zipCode = /^\d{5}$/;
-        if (zipCode.test(str)) {
-          return true
-        } else {
+        // const zipCode = /^\d{5}$/;
+        // if (zipCode.test(str)) {
+        //   return true
+        // } else {
+        //   return false;
+        // }
+        if  (str.length !== 5 || isNaN(str)) {
           return false;
+        } else {
+          return true;
         }
     }
 
