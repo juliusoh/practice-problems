@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function zipCodeValidator(str) {
+        const zipCode = /^\d{5}$/;
+        if (zipCode.test(str)) {
+          return true
+        } else {
+          return false;
+        }
+    }
+
+    console.log(zipCodeValidator("21594"),
+zipCodeValidator("3Eds32"),
+zipCodeValidator("9123465"),)
+  </script>
+</body>
+</html>
