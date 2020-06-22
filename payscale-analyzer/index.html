@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function payscaleAnalyzer(array){
+      const maxNum = Math.max(...array);
+      //console.log(maxNum);
+      const minNum = Math.min(...array);
+      //console.log(minNum);
+
+      return maxNum - minNum
+    }
+
+    console.log(payscaleAnalyzer([28, 34, 21, 39]))   // -> 18);
+    console.log(payscaleAnalyzer([18, 22, 19, 26]))   // -> 8
+    console.log(payscaleAnalyzer([41.50, 27.25, 32.50, 29.60]))  // -> 14.25
+
+    function alt(arr) {
+      minValue = Infinity;
+      maxValue = -Infinity;
+
+      for (item of arr) {
+        if (item < minValue)
+        minValue = item;
+
+        if (item > maxValue) {
+          maxValue = item;
+        }
+      }
+      return maxValue - minValue;
+    }
+
+    console.log(alt([28,34,21,39]));
+    console.log(alt([18, 22, 19, 26]));
+    console.log(alt([41.50, 27.25, 32.50, 29.60]));
+  </script>
+</body>
+</html>
