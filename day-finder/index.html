@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function dayFinder(stringDate){
+      const date = new Date(stringDate)
+      console.log(date);
+      const day = date.getDay();
+      console.log(day);
+      const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+      return (days[day - 1])
+    }
+
+    console.log(dayFinder("05/22/1946")) // -> "Wednesday");
+    console.log(dayFinder("01/20/2001")) // -> "Saturday"
+    console.log(dayFinder("03/15/1988")) // -> "Tuesday"
+
+  </script>
+</body>
+</html>
