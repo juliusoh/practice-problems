@@ -8,17 +8,16 @@
 <body>
   <script>
     function spellChecker(userWords, correctWords) {
-      const correctArr = [];
-      const wrongArr = [];
+      const arrays = {correctArr: [], wrongArr: []}
       for (let i = 0; i < userWords.length; i++) {
         if (userWords[i] === correctWords[i]) {
-          correctArr.push(correctWords[i])
+          arrays.correctArr.push(correctWords[i])
         } else {
-          wrongArr.push(userWords[i])
+          arrays.wrongArr.push(userWords[i])
          
         }
       }
-      return `correct: [${correctArr}], incorrect: [${wrongArr}]`
+      return arrays
     }
 
     console.log(spellChecker(["boy", "duct", "ice cream", "sendwich"], ["boy", "duck", "ice cream", "sandwich"])) // -> { correct: ["boy", "ice cream"], incorrect: ["duct", "sendwich"]});
